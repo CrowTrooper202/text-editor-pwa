@@ -22,6 +22,7 @@ export const putDb = async (content) => {
   const result = await request;
   console.log('🚀 - data saved to the database', result);
   // console.error('putDb not implemented')
+  // return result?.content
 };
 
 // TODO: Add logic for a method that gets all the content from the database
@@ -32,7 +33,7 @@ export const getDb = async () => {
   const store = tx.objectStore('jateSo');
   const request = store.get(1);
   const result = await request;
-  console.log('result.value', result);
+  // console.log('result.value', result.content);
   // console.error('getDb not implemented')
   return result?.content;
 };
